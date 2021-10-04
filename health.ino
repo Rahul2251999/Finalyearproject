@@ -16,12 +16,12 @@ uint32_t delayMS;
 #include "Ubidots.h"
 
 const char* UBIDOTS_TOKEN = "BBFF-g6IKYI9b6TvUqp2prrsNyQrTUggMG0";  // Put here your Ubidots TOKEN
-const char* WIFI_SSID = "Oneplus 7";      // Put here your Wi-Fi SSID
-const char* WIFI_PASS = "12345678";      // Put here your Wi-Fi password
+const char* WIFI_SSID = "One7";      // Put here your Wi-Fi SSID
+const char* WIFI_PASS = "128";      // Put here your Wi-Fi password
 Ubidots ubidots(UBIDOTS_TOKEN, UBI_HTTP);
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(125000);
   ubidots.wifiConnect(WIFI_SSID, WIFI_PASS);
   dht.begin();
   Serial.println(F("DHTxx Unified Sensor Example"));
